@@ -53,6 +53,11 @@ public class UserResource {
         return userService.updateUserPassword(id, password);
     }
 
+    @RequestMapping(path = "/changePassword", method = RequestMethod.PUT, produces = "Application/json",consumes = "Application/json")
+    User updateUserPassword(@RequestBody User user) {
+        return userService.updateUserPassword(user.getId(), user.getPassword());
+    }
+
     @DeleteMapping(path = "/{id}", produces = "Application/json", consumes = "Application/json")
     User deleteMovie(@PathVariable("id") int id) {
         return userService.deleteUserById(id);
