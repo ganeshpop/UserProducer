@@ -31,6 +31,11 @@ public class UserResource {
         return userService.getUserById(id);
     }
 
+    @GetMapping(path = "/name/{userName}", produces = "Application/json")
+    User getUserByName(@PathVariable("userName") String userName) {
+        return userService.getUserByName(userName);
+    }
+
 
     @GetMapping(path = "/xml/{id}", produces = "Application/xml")
     public User getXmlMovieById(@PathVariable("id") int id) {
