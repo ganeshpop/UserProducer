@@ -27,11 +27,12 @@ public class UserProducerApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        userService.insertUser(new User(1, "Ganesh", "password"));
-        userService.insertUser(new User(2, "Rajesh", "password"));
-        userService.insertUser(new User(3, "Ben", "password"));
-        userService.insertUser(new User(4, "Oman", "password"));
-        userService.insertUser(new User(5, "Hari", "password"));
+    public void run(String... args)  {
+        userService.insertUser(new User(1, "Ganesh", "Visakhapatnam, India", "password"));
+        userService.insertUser(new User(2, "Rajesh", "Delhi, India", "password"));
+        userService.insertUser(new User(3, "Ben", "Mumbai, India", "password"));
+        userService.insertUser(new User(4, "Oman", "Hyderabad, India", "password"));
+        userService.insertUser(new User(5, "Hari", "Visakhapatnam, India", "password"));
+        userService.insertUser(new User(6, "Ravi", "Mumbai, India", "password"));
     }
 }
